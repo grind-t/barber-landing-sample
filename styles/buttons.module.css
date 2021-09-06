@@ -1,0 +1,14 @@
+.primaryButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 242px;
+  min-height: 70px;
+  background: #d84040;
+  border: none;
+  color: white;
+  font-size: 1.125em;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
