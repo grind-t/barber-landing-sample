@@ -1,0 +1,10 @@
+.sectionHeading {
+  font-size: 3em;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .sectionHeading {
+    font-size: 2.25em;
+  }
+}
