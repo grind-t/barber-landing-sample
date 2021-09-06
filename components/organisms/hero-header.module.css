@@ -1,0 +1,75 @@
+.container {
+  min-height: 75vw;
+  padding: 45px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(/hero.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: 0 auto;
+  font-size: 1.375em;
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: space-between;
+  width: 155px;
+}
+
+.burgerMenu {
+  display: block;
+  width: 155px;
+  padding: 0;
+  background: none;
+  border: none;
+  text-align: right;
+  line-height: 0;
+}
+
+.contentContainer {
+  max-width: 780px;
+  margin: 12% auto 0;
+  text-align: center;
+}
+
+.heading {
+  composes: sectionHeading from "/styles/headings.module.css";
+}
+
+.paragraph {
+  margin: 35px 20px 65px;
+}
+
+.bookingButton {
+  composes: primaryButton from "/styles/buttons.module.css";
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .socialLinks {
+    flex-direction: column;
+    width: auto;
+  }
+
+  .socialLinks > * {
+    margin: 2px 0;
+  }
+
+  .burgerMenu {
+    width: auto;
+    margin-bottom: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+}
