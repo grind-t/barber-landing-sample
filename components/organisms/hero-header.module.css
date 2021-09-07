@@ -2,7 +2,7 @@
   min-height: 75vw;
   padding: 45px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(/hero.jpeg);
+    url(/images/hero.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   color: white;

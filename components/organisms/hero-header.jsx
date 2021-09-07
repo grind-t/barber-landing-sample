@@ -18,7 +18,7 @@ const HeroHeader = () => (
         <FontAwesomeIcon icon={faInstagram} />
         <FontAwesomeIcon icon={faLinkedinIn} />
       </div>
-      <Image src="/logo.png" alt="Лого" width="107" height="95" />
+      <Image src="/images/logo.png" alt="Лого" width="107" height="95" />
       <button type="button" className={styles.burgerMenu}>
         <FontAwesomeIcon icon={faBars} />
       </button>
