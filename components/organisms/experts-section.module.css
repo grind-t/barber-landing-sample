@@ -1,0 +1,41 @@
+.container {
+  padding-top: 100px;
+}
+
+.heading {
+  composes: sectionHeading from "/styles/headings.module.css";
+  margin: 0;
+  text-align: center;
+}
+
+.paragraph {
+  max-width: 840px;
+  margin: 35px auto 135px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style: none;
+}
+
+.listItem {
+  margin: 0 35px;
+}
+
+.figure {
+  margin: 0;
+}
+
+.figCaption {
+  margin: 20px 0 35px;
+  font-size: 30px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
