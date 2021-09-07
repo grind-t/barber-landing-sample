@@ -67,6 +67,7 @@
   right: 0;
   width: 13.5%;
   max-width: 260px;
+  line-height: 0;
   z-index: 1;
 }
 
