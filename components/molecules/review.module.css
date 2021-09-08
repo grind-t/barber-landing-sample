@@ -1,0 +1,56 @@
+.container {
+  position: relative;
+  padding: 60px 0 0 5px;
+}
+
+.container::before {
+  content: "“";
+  position: absolute;
+  left: -15px;
+  top: -30px;
+  color: rgba(0, 0, 0, 0.14);
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: bold;
+  font-size: 360px;
+  line-height: 1;
+}
+
+.figure {
+  margin: 0;
+}
+
+.heading {
+  composes: sectionHeading from "/styles/headings.module.css";
+  margin: 0;
+}
+
+.blockquote {
+  margin: 60px 0 50px 0;
+  font-style: italic;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+}
+
+.authorImage {
+  width: fit-content;
+  margin-right: 15px;
+  border-radius: 50%;
+  line-height: 0;
+  overflow: hidden;
+}
+
+.authorName {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.authorProfession {
+  margin-left: 10px;
+  padding-left: 10px;
+  border-left: 1px solid #24272b;
+  color: #24272b;
+  opacity: 0.45;
+}
