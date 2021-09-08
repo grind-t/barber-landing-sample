@@ -1,0 +1,21 @@
+.container {
+  max-width: 545px;
+}
+
+.navigation {
+  width: fit-content;
+  margin-left: auto;
+}
+
+.navigationButton {
+  margin-left: 15px;
+  padding: 0;
+  background: none;
+  border: none;
+  color: #3f4146;
+  font-size: 1.5em;
+}
+
+.navigationButton:disabled {
+  opacity: 0.32;
+}
