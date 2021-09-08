@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.leftDecoration {
+  flex: 1 0.9 0;
+  position: relative;
+  height: 44vw;
+  max-height: 845px;
+}
+
+.overlay {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 160px 20px 35px 135px;
+  margin: 0 auto 0 -0.8vw;
+  background: white;
+  z-index: 1;
+}
+
+@media (max-width: 1440px) {
+  .overlay {
+    padding: 20px 40px;
+    margin: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .leftDecoration {
+    display: none;
+  }
+
+  .overlay {
+    max-width: 625px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 425px) {
+  .overlay {
+    padding: 20px;
+  }
+}
