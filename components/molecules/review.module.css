@@ -54,3 +54,15 @@
   color: #24272b;
   opacity: 0.45;
 }
+
+@media (max-width: 1024px) {
+  .authorName {
+    font-size: 1.25em;
+  }
+}
+
+@media (max-width: 425px) {
+  .authorName {
+    font-size: 1em;
+  }
+}
