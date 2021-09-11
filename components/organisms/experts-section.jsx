@@ -14,7 +14,7 @@ const ExpertsSection = () => (
         <figure className={styles.figure}>
           <div className={styles.image}>
             <Image
-              src="master1.jpeg"
+              src="/images/master1.jpeg"
               alt="фото мастера"
               width="325"
               height="425"
@@ -27,7 +27,7 @@ const ExpertsSection = () => (
         <figure className={styles.figure}>
           <div className={styles.image}>
             <Image
-              src="master2.jpeg"
+              src="/images/master2.jpeg"
               alt="фото мастера"
               width="325"
               height="425"
@@ -40,7 +40,7 @@ const ExpertsSection = () => (
         <figure className={styles.figure}>
           <div className={styles.image}>
             <Image
-              src="master3.jpeg"
+              src="/images/master3.jpeg"
               alt="фото мастера"
               width="325"
               height="425"
