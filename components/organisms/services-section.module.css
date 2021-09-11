@@ -1,0 +1,104 @@
+.container {
+  padding-top: 100px;
+  background-image: url("/images/brush.png");
+  background-repeat: no-repeat;
+  background-position: right 8% top 230px;
+}
+
+.heading {
+  composes: sectionHeading from "/styles/headings.module.css";
+  margin: 0;
+  text-align: center;
+}
+
+.content {
+  margin: 5% 0 0 15%;
+  width: 40%;
+}
+
+.services {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.25em;
+}
+
+.services > li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.serviceHeading {
+  margin: 20px 80px 20px 0;
+  font-size: 1em;
+}
+
+.servicePrice {
+  flex: none;
+  color: #d84040;
+}
+
+.bookingButton {
+  composes: primaryButton from "/styles/buttons.module.css";
+  margin: 60px 0 0;
+}
+
+@media (max-width: 1920px) {
+  .container {
+    background-size: 27%;
+  }
+}
+
+@media (max-width: 1440px) {
+  .container {
+    background-position: right 5% top 60%;
+  }
+
+  .content {
+    width: 50%;
+    margin: 5% 0 0 10%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    background-image: none;
+  }
+
+  .content {
+    width: 100%;
+    max-width: 850px;
+    padding: 0 40px;
+    margin: 40px auto 0;
+  }
+
+  .bookingButton {
+    margin: 40px auto 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    margin-top: 20px;
+  }
+
+  .services {
+    font-size: 1.75em;
+  }
+
+  .serviceHeading {
+    margin: 15px 40px 15px 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .content {
+    padding: 0 20px;
+  }
+
+  .services {
+    font-size: 1.5em;
+  }
+}
