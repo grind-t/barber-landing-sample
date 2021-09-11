@@ -12,34 +12,40 @@ const ExpertsSection = () => (
     <ul className={styles.list}>
       <li className={styles.listItem}>
         <figure className={styles.figure}>
-          <Image
-            src="/images/master1.jpeg"
-            alt="фото мастера"
-            width="325"
-            height="425"
-          />
+          <div className={styles.image}>
+            <Image
+              src="/images/master1.jpeg"
+              alt="фото мастера"
+              width="325"
+              height="425"
+            />
+          </div>
           <figcaption className={styles.figCaption}>Василий Юрьев</figcaption>
         </figure>
       </li>
       <li className={styles.listItem}>
         <figure className={styles.figure}>
-          <Image
-            src="/images/master2.jpeg"
-            alt="фото мастера"
-            width="325"
-            height="425"
-          />
+          <div className={styles.image}>
+            <Image
+              src="/images/master2.jpeg"
+              alt="фото мастера"
+              width="325"
+              height="425"
+            />
+          </div>
           <figcaption className={styles.figCaption}>Василий Юрьев</figcaption>
         </figure>
       </li>
       <li className={styles.listItem}>
         <figure className={styles.figure}>
-          <Image
-            src="/images/master3.jpeg"
-            alt="фото мастера"
-            width="325"
-            height="425"
-          />
+          <div className={styles.image}>
+            <Image
+              src="/images/master3.jpeg"
+              alt="фото мастера"
+              width="325"
+              height="425"
+            />
+          </div>
           <figcaption className={styles.figCaption}>Юрьев Василий</figcaption>
         </figure>
       </li>
