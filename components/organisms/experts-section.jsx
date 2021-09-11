@@ -20,7 +20,7 @@ const ExpertsSection = () => (
               height="425"
             />
           </div>
-          <figcaption className={styles.figCaption}>Василий Юрьев</figcaption>
+          <figcaption className={styles.figCaption}>Monkey D. luffy</figcaption>
         </figure>
       </li>
       <li className={styles.listItem}>
@@ -33,7 +33,7 @@ const ExpertsSection = () => (
               height="425"
             />
           </div>
-          <figcaption className={styles.figCaption}>Василий Юрьев</figcaption>
+          <figcaption className={styles.figCaption}>Ichigo kurosaki</figcaption>
         </figure>
       </li>
       <li className={styles.listItem}>
@@ -46,7 +46,7 @@ const ExpertsSection = () => (
               height="425"
             />
           </div>
-          <figcaption className={styles.figCaption}>Юрьев Василий</figcaption>
+          <figcaption className={styles.figCaption}>Kieran Dely</figcaption>
         </figure>
       </li>
     </ul>
