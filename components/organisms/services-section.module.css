@@ -60,6 +60,10 @@
     width: 50%;
     margin: 5% 0 0 10%;
   }
+
+  .services {
+    font-size: 2em;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -89,6 +93,7 @@
 
   .serviceHeading {
     margin: 15px 40px 15px 0;
+    font-weight: normal;
   }
 }
 
@@ -99,5 +104,9 @@
 
   .services {
     font-size: 1.5em;
+  }
+
+  .servicePrice {
+    font-weight: normal;
   }
 }
