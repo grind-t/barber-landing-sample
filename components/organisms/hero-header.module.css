@@ -8,44 +8,83 @@
   color: white;
 }
 
-.topBar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1280px;
-  margin: 0 auto;
-  font-size: 1.375em;
-}
-
 .socialLinks {
+  position: absolute;
+  top: 80px;
+  left: 15.625%;
   display: flex;
   justify-content: space-between;
-  width: 155px;
+  width: 7em;
+  padding: 0;
+  margin: 0;
+  font-size: 1.625em;
+  list-style: none;
+  line-height: 0;
 }
 
-.burgerMenu {
+.logo {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  right: 0;
   display: block;
-  width: 155px;
+  width: fit-content;
+  margin: 0 auto;
+  line-height: 0;
+}
+
+.burgerMenuToggle {
+  composes: visually-hidden from global;
+  display: none;
+}
+
+.burgerMenuIcon {
+  position: absolute;
+  top: 80px;
+  right: 40px;
+  display: none;
   padding: 0;
   background: none;
   border: none;
   text-align: right;
+  font-size: 1.25em;
   line-height: 0;
+  z-index: 11;
 }
 
-.contentContainer {
-  max-width: 780px;
-  margin: 12% auto 0;
-  text-align: center;
+.navList {
+  position: absolute;
+  top: 80px;
+  right: 15.625%;
+  display: flex;
+  justify-content: space-between;
+  width: 16em;
+  padding: 0;
+  margin: 0;
+  font-size: 1.625em;
+  line-height: 1;
+  list-style: none;
+  z-index: 10;
+}
+
+.burgerMenuToggle:checked ~ .navList {
+  right: 0;
+  visibility: visible;
 }
 
 .heading {
   composes: sectionHeading from "/styles/headings.module.css";
+  max-width: 780px;
+  margin: 20% auto 0;
+  text-align: center;
 }
 
 .paragraph {
-  margin: 35px 20px 65px;
+  max-width: 780px;
+  margin: 35px auto 65px;
+  padding: 0 20px;
   font-weight: 600;
+  text-align: center;
 }
 
 .bookingButton {
@@ -53,24 +92,77 @@
   margin: 0 auto;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1920px) {
+  .socialLinks,
+  .navList {
+    font-size: 1.375em;
+  }
+}
+
+@media (max-width: 1440px) {
   .socialLinks {
+    left: 40px;
+  }
+
+  .navList {
+    right: 40px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .socialLinks,
+  .navList {
+    font-size: 1.25em;
+  }
+}
+
+@media (max-width: 1024px) {
+  .burgerMenuToggle,
+  .burgerMenuIcon {
+    display: block;
+  }
+
+  .navList {
+    position: fixed;
+    top: 0;
+    right: -16em;
     flex-direction: column;
-    width: auto;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    max-width: 100vw;
+    background: black;
+    visibility: hidden;
+    transition: right 500ms;
   }
 
-  .socialLinks > * {
-    margin: 2px 0;
+  .navList > li {
+    margin: 15px 0;
   }
 
-  .burgerMenu {
-    width: auto;
-    margin-bottom: auto;
+  .heading {
+    margin: 160px auto 0;
   }
 }
 
 @media (max-width: 768px) {
   .container {
-    padding: 20px;
+    padding: 45px 20px;
+  }
+
+  .socialLinks {
+    top: 45px;
+    left: 20px;
+    flex-direction: column;
+    width: auto;
+  }
+
+  .socialLinks > li {
+    margin: 2px 0;
+  }
+
+  .burgerMenuIcon {
+    top: 45px;
+    right: 20px;
   }
 }

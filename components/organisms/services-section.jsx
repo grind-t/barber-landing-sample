@@ -2,7 +2,7 @@ import styles from "./services-section.module.css";
 import Link from "next/link";
 
 const ServicesSection = () => (
-  <section className={styles.container}>
+  <section id="pricing" className={styles.container}>
     <h2 className={styles.heading}>Прейскурант</h2>
     <div className={styles.content}>
       <ul className={styles.services}>

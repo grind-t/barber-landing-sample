@@ -2,7 +2,7 @@ import styles from "./about-section.module.css";
 import Image from "next/image";
 
 const AboutSection = () => (
-  <section className={styles.container}>
+  <section id="about" className={styles.container}>
     <div className={styles.leftDecoration}>
       <div className={styles.leftDecorationImage1}>
         <Image src="/images/model1.jpeg" alt="" width="422" height="422" />

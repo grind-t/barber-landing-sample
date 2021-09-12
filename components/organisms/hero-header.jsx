@@ -1,6 +1,6 @@
 import styles from "./hero-header.module.css";
 import Image from "next/image";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebookF,
@@ -8,22 +8,92 @@ import {
   faLinkedinIn,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
-const HeroHeader = () => (
-  <header className={styles.container}>
-    <div className={styles.topBar}>
-      <div className={styles.socialLinks}>
-        <FontAwesomeIcon icon={faFacebookF} />
-        <FontAwesomeIcon icon={faTwitter} />
-        <FontAwesomeIcon icon={faInstagram} />
-        <FontAwesomeIcon icon={faLinkedinIn} />
+const HeroHeader = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "unset";
+  }, [menuOpen]);
+
+  const handleLinkClick = () => setMenuOpen(false);
+
+  return (
+    <header className={styles.container}>
+      <ul className={styles.socialLinks}>
+        <li>
+          <Link href="#">
+            <a>
+              <FontAwesomeIcon icon={faFacebookF} />
+              <span className="visually-hidden">Facebook</span>
+            </a>
+          </Link>
+        </li>
+        <li>
+          <Link href="#">
+            <a>
+              <FontAwesomeIcon icon={faTwitter} />
+              <span className="visually-hidden">Twitter</span>
+            </a>
+          </Link>
+        </li>
+        <li>
+          <Link href="#">
+            <a>
+              <FontAwesomeIcon icon={faInstagram} />
+              <span className="visually-hidden">Instagram</span>
+            </a>
+          </Link>
+        </li>
+        <li>
+          <Link href="#">
+            <a>
+              <FontAwesomeIcon icon={faLinkedinIn} />
+              <span className="visually-hidden">LinkedIn</span>
+            </a>
+          </Link>
+        </li>
+      </ul>
+      <div className={styles.logo}>
+        <Image src="/images/logo.png" alt="Лого" width="107" height="95" />
       </div>
-      <Image src="/images/logo.png" alt="Лого" width="107" height="95" />
-      <button type="button" className={styles.burgerMenu}>
-        <FontAwesomeIcon icon={faBars} />
-      </button>
-    </div>
-    <div className={styles.contentContainer}>
+      <nav>
+        <input
+          id="burger-menu-toggle"
+          type="checkbox"
+          checked={menuOpen}
+          onChange={(e) => setMenuOpen(e.target.checked)}
+          className={styles.burgerMenuToggle}
+        />
+        <label htmlFor="burger-menu-toggle" className={styles.burgerMenuIcon}>
+          <span className="visually-hidden">Меню</span>
+          <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} />
+        </label>
+        <ul className={styles.navList}>
+          <li>
+            <Link href="#about">
+              <a onClick={handleLinkClick}>О нас</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="#pricing">
+              <a onClick={handleLinkClick}>Цены</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="#experts">
+              <a onClick={handleLinkClick}>Мастера</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="#reviews">
+              <a onClick={handleLinkClick}>Отзывы</a>
+            </Link>
+          </li>
+        </ul>
+      </nav>
       <h1 className={styles.heading}>
         Стиль - это отражение вашей позиции и вашей индивидуальности.
       </h1>
@@ -35,8 +105,8 @@ const HeroHeader = () => (
       <button type="button" className={styles.bookingButton}>
         Записаться сейчас!
       </button>
-    </div>
-  </header>
-);
+    </header>
+  );
+};
 
 export default HeroHeader;

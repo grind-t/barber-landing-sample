@@ -14,7 +14,7 @@ const ReviewsSection = () => {
   };
 
   return (
-    <section className={styles.container}>
+    <section id="reviews" className={styles.container}>
       <div className={styles.leftDecoration}>
         <Image
           src="/images/happy-customer.jpeg"

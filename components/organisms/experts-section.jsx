@@ -2,7 +2,7 @@ import styles from "./experts-section.module.css";
 import Image from "next/image";
 
 const ExpertsSection = () => (
-  <section className={styles.container}>
+  <section id="experts" className={styles.container}>
     <h2 className={styles.heading}>Наши мастера</h2>
     <p className={styles.paragraph}>
       Уверенность - ключ к жизни. Не надо бояться быть собой! Я очень отличаюсь
